@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sun Nov 26 17:57:29 2017
+# Process ID: 17564
+# Current directory: S:/360Downloads/Pipeline/Pipeline.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source S:/360Downloads/Pipeline/Pipeline.sim/sim_1/behav/xsim.dir/top_tb_v_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: S:/360Downloads/Pipeline/Pipeline.sim/sim_1/behav/webtalk.log
+# Journal file: S:/360Downloads/Pipeline/Pipeline.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source S:/360Downloads/Pipeline/Pipeline.sim/sim_1/behav/xsim.dir/top_tb_v_behav/webtalk/xsim_webtalk.tcl -notrace

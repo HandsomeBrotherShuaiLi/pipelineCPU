@@ -1,0 +1,47 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto eadd8b005fb449efa4e4209828d76611 --debug typical --relax --mt 2 -L xil_defaultlib -L xpm -L dist_mem_gen_v8_0_10 -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_v_behav xil_defaultlib.top_tb_v xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ci [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/IF.v:65]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port cin [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/mux_adder.v:36]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port cin [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/mux_adder.v:40]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ci [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ID.v:79]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ci [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:159]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=10.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_div_clk_wiz
+Compiling module xil_defaultlib.clk_div
+Compiling module xil_defaultlib.dffre(WIDTH=32)
+Compiling module xil_defaultlib.full_adder
+Compiling module xil_defaultlib.adder_4bits
+Compiling module xil_defaultlib.mux_adder
+Compiling module xil_defaultlib.adder_32bits
+Compiling module dist_mem_gen_v8_0_10.dist_mem_gen_v8_0_10(C_FAMILY="a...
+Compiling module xil_defaultlib.instructionROM
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.Zero_test
+Compiling module xil_defaultlib.Hazard_detector
+Compiling module xil_defaultlib.Decode
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.RsSel_RtSel
+Compiling module xil_defaultlib.ID
+Compiling module xil_defaultlib.dffr(WIDTH=2)
+Compiling module xil_defaultlib.dffr(WIDTH=8)
+Compiling module xil_defaultlib.dffr(WIDTH=32)
+Compiling module xil_defaultlib.dffr(WIDTH=5)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.dffr
+Compiling module dist_mem_gen_v8_0_10.dist_mem_gen_v8_0_10(C_FAMILY="a...
+Compiling module xil_defaultlib.dataRAM
+Compiling module xil_defaultlib.seg
+Compiling module xil_defaultlib.MipsPipelineCPU
+Compiling module xil_defaultlib.top_tb_v
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_v_behav

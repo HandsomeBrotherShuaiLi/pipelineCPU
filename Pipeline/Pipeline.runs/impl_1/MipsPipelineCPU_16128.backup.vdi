@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Nov 07 13:33:23 2017
+# Process ID: 16128
+# Current directory: S:/360Downloads/Pipeline/Pipeline.runs/impl_1
+# Command line: vivado.exe -log MipsPipelineCPU.vdi -applog -messageDb vivado.pb -mode batch -source MipsPipelineCPU.tcl -notrace
+# Log file: S:/360Downloads/Pipeline/Pipeline.runs/impl_1/MipsPipelineCPU.vdi
+# Journal file: S:/360Downloads/Pipeline/Pipeline.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source MipsPipelineCPU.tcl -notrace
+Command: open_checkpoint MipsPipelineCPU_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 206.941 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1

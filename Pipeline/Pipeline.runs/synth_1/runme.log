@@ -1,0 +1,807 @@
+
+*** Running vivado
+    with args -log MipsPipelineCPU.vds -m64 -mode batch -messageDb vivado.pb -notrace -source MipsPipelineCPU.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source MipsPipelineCPU.tcl -notrace
+Command: synth_design -top MipsPipelineCPU -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10572 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 267.879 ; gain = 60.781
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'MipsPipelineCPU' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/MipsPipelineCPU.v:23]
+INFO: [Synth 8-638] synthesizing module 'clk_div' [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/realtime/clk_div_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (1#1) [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/realtime/clk_div_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'IF' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/IF.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/IF.v:42]
+INFO: [Synth 8-638] synthesizing module 'dffre' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:61]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffre' (2#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:61]
+INFO: [Synth 8-638] synthesizing module 'adder_32bits' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/adder_32bits.v:23]
+INFO: [Synth 8-638] synthesizing module 'adder_4bits' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/adder_4bits.v:23]
+INFO: [Synth 8-638] synthesizing module 'full_adder' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/full_adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'full_adder' (3#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/full_adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'adder_4bits' (4#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/adder_4bits.v:23]
+INFO: [Synth 8-638] synthesizing module 'mux_adder' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/mux_adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'mux_adder' (5#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/mux_adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'adder_32bits' (6#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/adder_32bits.v:23]
+INFO: [Synth 8-638] synthesizing module 'instructionROM' [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/realtime/instructionROM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'instructionROM' (7#1) [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/realtime/instructionROM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'IF' (8#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/IF.v:23]
+INFO: [Synth 8-638] synthesizing module 'ID' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ID.v:23]
+	Parameter alu_beq bound to: 5'b01010 
+	Parameter alu_bne bound to: 5'b01011 
+	Parameter alu_bgez bound to: 5'b01100 
+	Parameter alu_bgtz bound to: 5'b01101 
+	Parameter alu_blez bound to: 5'b01110 
+	Parameter alu_bltz bound to: 5'b01111 
+INFO: [Synth 8-638] synthesizing module 'Zero_test' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/Zero_test.v:23]
+	Parameter alu_beq bound to: 5'b01010 
+	Parameter alu_bne bound to: 5'b01011 
+	Parameter alu_bgez bound to: 5'b01100 
+	Parameter alu_bgtz bound to: 5'b01101 
+	Parameter alu_blez bound to: 5'b01110 
+	Parameter alu_bltz bound to: 5'b01111 
+INFO: [Synth 8-256] done synthesizing module 'Zero_test' (9#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/Zero_test.v:23]
+INFO: [Synth 8-638] synthesizing module 'Hazard_detector' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/Hazard_detector.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Hazard_detector' (10#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/Hazard_detector.v:23]
+INFO: [Synth 8-638] synthesizing module 'Decode' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/Decode.v:23]
+	Parameter R_type_op bound to: 6'b000000 
+	Parameter ADD_funct bound to: 6'b100000 
+	Parameter ADDU_funct bound to: 6'b100001 
+	Parameter AND_funct bound to: 6'b100100 
+	Parameter XOR_funct bound to: 6'b100110 
+	Parameter OR_funct bound to: 6'b100101 
+	Parameter NOR_funct bound to: 6'b100111 
+	Parameter SUB_funct bound to: 6'b100010 
+	Parameter SUBU_funct bound to: 6'b100011 
+	Parameter SLT_funct bound to: 6'b101010 
+	Parameter SLTU_funct bound to: 6'b101011 
+	Parameter SLL_funct bound to: 6'b000000 
+	Parameter SLLV_funct bound to: 6'b000100 
+	Parameter SRL_funct bound to: 6'b000010 
+	Parameter SRLV_funct bound to: 6'b000110 
+	Parameter SRA_funct bound to: 6'b000011 
+	Parameter SRAV_funct bound to: 6'b000111 
+	Parameter JR_funct bound to: 6'b001000 
+	Parameter BEQ_op bound to: 6'b000100 
+	Parameter BNE_op bound to: 6'b000101 
+	Parameter BGEZ_op bound to: 6'b000001 
+	Parameter BGEZ_rt bound to: 5'b00001 
+	Parameter BGTZ_op bound to: 6'b000111 
+	Parameter BGTZ_rt bound to: 5'b00000 
+	Parameter BLEZ_op bound to: 6'b000110 
+	Parameter BLEZ_rt bound to: 5'b00000 
+	Parameter BLTZ_op bound to: 6'b000001 
+	Parameter BLTZ_rt bound to: 5'b00000 
+	Parameter J_op bound to: 6'b000010 
+	Parameter ADDI_op bound to: 6'b001000 
+	Parameter ADDIU_op bound to: 6'b001001 
+	Parameter ANDI_op bound to: 6'b001100 
+	Parameter XORI_op bound to: 6'b001110 
+	Parameter ORI_op bound to: 6'b001101 
+	Parameter SLTI_op bound to: 6'b001010 
+	Parameter SLTIU_op bound to: 6'b001011 
+	Parameter SW_op bound to: 6'b101011 
+	Parameter LW_op bound to: 6'b100011 
+	Parameter alu_add bound to: 5'b00000 
+	Parameter alu_and bound to: 5'b00001 
+	Parameter alu_xor bound to: 5'b00010 
+	Parameter alu_or bound to: 5'b00011 
+	Parameter alu_nor bound to: 5'b00100 
+	Parameter alu_sub bound to: 5'b00101 
+	Parameter alu_andi bound to: 5'b00110 
+	Parameter alu_xori bound to: 5'b00111 
+	Parameter alu_ori bound to: 5'b01000 
+	Parameter alu_jr bound to: 5'b01001 
+	Parameter alu_beq bound to: 5'b01010 
+	Parameter alu_bne bound to: 5'b01011 
+	Parameter alu_bgez bound to: 5'b01100 
+	Parameter alu_bgtz bound to: 5'b01101 
+	Parameter alu_blez bound to: 5'b01110 
+	Parameter alu_bltz bound to: 5'b01111 
+	Parameter alu_sll bound to: 5'b10000 
+	Parameter alu_srl bound to: 5'b10001 
+	Parameter alu_sra bound to: 5'b10010 
+	Parameter alu_slt bound to: 5'b10011 
+	Parameter alu_sltu bound to: 5'b10100 
+WARNING: [Synth 8-151] case item 6'b000001 is unreachable [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/Decode.v:228]
+INFO: [Synth 8-256] done synthesizing module 'Decode' (11#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/Decode.v:23]
+INFO: [Synth 8-638] synthesizing module 'Registers' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/Registers.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Registers' (12#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/Registers.v:23]
+INFO: [Synth 8-638] synthesizing module 'RsSel_RtSel' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/RsSel_RtSel.v:23]
+INFO: [Synth 8-256] done synthesizing module 'RsSel_RtSel' (13#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/RsSel_RtSel.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ID' (14#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ID.v:23]
+INFO: [Synth 8-638] synthesizing module 'dffr' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr' (15#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized0' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized0' (15#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized1' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized1' (15#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized2' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized2' (15#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized3' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized3' (15#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized4' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized4' (15#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized5' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized5' (15#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized6' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized6' (15#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized7' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized7' (15#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'EX' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/EX.v:23]
+INFO: [Synth 8-638] synthesizing module 'ALU' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:23]
+	Parameter alu_add bound to: 5'b00000 
+	Parameter alu_and bound to: 5'b00001 
+	Parameter alu_xor bound to: 5'b00010 
+	Parameter alu_or bound to: 5'b00011 
+	Parameter alu_nor bound to: 5'b00100 
+	Parameter alu_sub bound to: 5'b00101 
+	Parameter alu_andi bound to: 5'b00110 
+	Parameter alu_xori bound to: 5'b00111 
+	Parameter alu_ori bound to: 5'b01000 
+	Parameter alu_jr bound to: 5'b01001 
+	Parameter alu_beq bound to: 5'b01010 
+	Parameter alu_bne bound to: 5'b01011 
+	Parameter alu_bgez bound to: 5'b01100 
+	Parameter alu_bgtz bound to: 5'b01101 
+	Parameter alu_blez bound to: 5'b01110 
+	Parameter alu_bltz bound to: 5'b01111 
+	Parameter alu_sll bound to: 5'b10000 
+	Parameter alu_srl bound to: 5'b10001 
+	Parameter alu_sra bound to: 5'b10010 
+	Parameter alu_slt bound to: 5'b10011 
+	Parameter alu_sltu bound to: 5'b10100 
+INFO: [Synth 8-256] done synthesizing module 'ALU' (16#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-256] done synthesizing module 'EX' (17#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/EX.v:23]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized8' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized8' (17#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized9' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized9' (17#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized10' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized10' (17#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized11' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized11' (17#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dataRAM' [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/realtime/dataRAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'dataRAM' (18#1) [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/realtime/dataRAM_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized12' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized12' (18#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'dffr__parameterized13' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dffr__parameterized13' (18#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/ff_lib.v:39]
+INFO: [Synth 8-638] synthesizing module 'seg' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/seg.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/seg.v:88]
+INFO: [Synth 8-256] done synthesizing module 'seg' (19#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/seg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'MipsPipelineCPU' (20#1) [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/MipsPipelineCPU.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 305.164 ; gain = 98.066
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 305.164 ; gain = 98.066
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_div' instantiated as 'clock' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/MipsPipelineCPU.v:44]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'dataRAM' instantiated as 'dataram' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/MipsPipelineCPU.v:314]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'instructionROM' instantiated as 'IF/instruction' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/IF.v:74]
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/dcp/instructionROM_in_context.xdc] for cell 'IF/instruction'
+Finished Parsing XDC File [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/dcp/instructionROM_in_context.xdc] for cell 'IF/instruction'
+Parsing XDC File [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/dcp_2/dataRAM_in_context.xdc] for cell 'dataram'
+Finished Parsing XDC File [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/dcp_2/dataRAM_in_context.xdc] for cell 'dataram'
+Parsing XDC File [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/dcp_3/clk_div_in_context.xdc] for cell 'clock'
+Finished Parsing XDC File [S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/dcp_3/clk_div_in_context.xdc] for cell 'clock'
+Parsing XDC File [S:/360Downloads/Pipeline/Pipeline.srcs/constrs_1/new/ppp.xdc]
+Finished Parsing XDC File [S:/360Downloads/Pipeline/Pipeline.srcs/constrs_1/new/ppp.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [S:/360Downloads/Pipeline/Pipeline.srcs/constrs_1/new/ppp.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/MipsPipelineCPU_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/MipsPipelineCPU_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 617.129 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'dataram' at clock pin 'clk' is different from the actual clock period '10.000', this can result in different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 617.129 ; gain = 410.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 617.129 ; gain = 410.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/dcp_3/clk_div_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  S:/360Downloads/Pipeline/Pipeline.runs/synth_1/.Xil/Vivado-10524-DESKTOP-707DVJK/dcp_3/clk_div_in_context.xdc, line 4).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 617.129 ; gain = 410.031
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "o_seg_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cs" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'PC_in_reg' [S:/360Downloads/Pipeline/Pipeline.srcs/sources_1/new/IF.v:43]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 617.129 ; gain = 410.031
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 4     
+	   3 Input      1 Bit         XORs := 180   
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 11    
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 5     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input      8 Bit        Muxes := 1     
+	  16 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	  16 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 16    
+	   2 Input      4 Bit        Muxes := 22    
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module MipsPipelineCPU 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module dffre 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module full_adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module mux_adder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module IF 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      1 Bit        Muxes := 1     
+Module Zero_test 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Decode 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 15    
+	   2 Input      4 Bit        Muxes := 1     
+Module Registers 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module ID 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module dffr 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module dffr__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module dffr__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module dffr__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module dffr__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module dffr__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module dffr__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module dffr__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module dffr__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module EX 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 1     
+Module dffr__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module dffr__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module dffr__parameterized10 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module dffr__parameterized11 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module dffr__parameterized12 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module dffr__parameterized13 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module seg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	  16 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 617.129 ; gain = 410.031
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 617.129 ; gain = 410.031
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 617.129 ; gain = 410.031
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+-------------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object              | Inference | Size (Depth x Width) | Primitives    | 
++------------+-------------------------+-----------+----------------------+---------------+
+|ID          | MultiRegisters/regs_reg | Implied   | 32 x 32              | RAM32M x 12   | 
++------------+-------------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_WB/q_reg[1]' (FDR) to 'dffr_IDEX_M/q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_RdAddr/q_reg[3]' (FDR) to 'dffr_IDEX_Imm/q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_RdAddr/q_reg[4]' (FDR) to 'dffr_IDEX_Imm/q_reg[15]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_RdAddr/q_reg[0]' (FDR) to 'dffr_IDEX_Imm/q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_RdAddr/q_reg[1]' (FDR) to 'dffr_IDEX_Imm/q_reg[12]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_RdAddr/q_reg[2]' (FDR) to 'dffr_IDEX_Imm/q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Imm/q_reg[9]' (FDR) to 'dffr_IDEX_Sa/q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Imm/q_reg[7]' (FDR) to 'dffr_IDEX_Sa/q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Imm/q_reg[8]' (FDR) to 'dffr_IDEX_Sa/q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Imm/q_reg[10]' (FDR) to 'dffr_IDEX_Sa/q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[31]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[30]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[29]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[28]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[27]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[26]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[25]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[24]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[23]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[22]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[21]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[20]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[19]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[18]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[17]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[16]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[15]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[14]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[13]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[12]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[11]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[10]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[9]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[8]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[7]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Sa/q_reg[6]' (FDR) to 'dffr_IDEX_Sa/q_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dffr_IDEX_Sa/q_reg[5] )
+INFO: [Synth 8-3886] merging instance 'dffr_IDEX_Imm/q_reg[6]' (FDR) to 'dffr_IDEX_Sa/q_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (seg7/\o_seg_r_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[31]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[30]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[29]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[28]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[27]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[26]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[25]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[24]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[23]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[22]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[21]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[20]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[19]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[18]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[17]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[16]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[15]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[14]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[13]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[12]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[11]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[10]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[9]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[8]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[1]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (PC_in_reg[0]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[31]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[30]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[29]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[28]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[27]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[26]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[25]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[24]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[23]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[22]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[21]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[20]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[19]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[18]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[17]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[16]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[15]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[14]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[13]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[12]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[11]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[10]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[9]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[8]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[1]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (dffre_PC_REG/q_reg[0]) is unused and will be removed from module IF.
+WARNING: [Synth 8-3332] Sequential element (o_seg_r_reg[7]) is unused and will be removed from module seg.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[31]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[30]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[29]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[28]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[27]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[26]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[25]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[24]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[23]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[22]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[21]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[20]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[19]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[18]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[17]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[16]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[15]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[14]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[13]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[12]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[11]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[10]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[9]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[8]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[1]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffre_IFID_NextPC/q_reg[0]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[31]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[30]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[29]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[28]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[27]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[26]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[25]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[24]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[23]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[22]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[21]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[20]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[19]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[18]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[17]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[16]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[15]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[14]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[13]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[12]) is unused and will be removed from module MipsPipelineCPU.
+WARNING: [Synth 8-3332] Sequential element (dffr_IDEX_Sa/q_reg[11]) is unused and will be removed from module MipsPipelineCPU.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:08 . Memory (MB): peak = 617.129 ; gain = 410.031
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:05 ; elapsed = 00:01:08 . Memory (MB): peak = 617.129 ; gain = 410.031
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock/clk_out1' to pin 'clock/bbstub_clk_out1/O'
+INFO: [Synth 8-5820] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:17 . Memory (MB): peak = 617.992 ; gain = 410.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 633.578 ; gain = 426.480
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 676.211 ; gain = 469.113
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 676.211 ; gain = 469.113
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 676.211 ; gain = 469.113
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 676.211 ; gain = 469.113
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 676.211 ; gain = 469.113
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 676.211 ; gain = 469.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 676.211 ; gain = 469.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 676.211 ; gain = 469.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 676.211 ; gain = 469.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |clk_div        |         1|
+|2     |instructionROM |         1|
+|3     |dataRAM        |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |clk_div        |     1|
+|2     |dataRAM        |     1|
+|3     |instructionROM |     1|
+|4     |CARRY4         |    12|
+|5     |LUT1           |    52|
+|6     |LUT2           |    12|
+|7     |LUT3           |   163|
+|8     |LUT4           |    81|
+|9     |LUT5           |   167|
+|10    |LUT6           |   687|
+|11    |MUXF7          |    15|
+|12    |RAM32M         |    12|
+|13    |FDCE           |    50|
+|14    |FDPE           |     7|
+|15    |FDRE           |   256|
+|16    |LD             |     6|
+|17    |IBUF           |     1|
+|18    |OBUF           |    16|
++------+---------------+------+
+
+Report Instance Areas: 
++------+--------------------------+----------------------+------+
+|      |Instance                  |Module                |Cells |
++------+--------------------------+----------------------+------+
+|1     |top                       |                      |  1603|
+|2     |  IF                      |IF                    |    50|
+|3     |    dffre_PC_REG          |dffre_4               |    12|
+|4     |  ID                      |ID                    |    13|
+|5     |    MultiRegisters        |Registers             |    13|
+|6     |  dffr_EXMEM_ALUResult    |dffr__parameterized9  |    33|
+|7     |  dffr_EXMEM_M            |dffr__parameterized8  |     1|
+|8     |  dffr_EXMEM_MemWriteData |dffr__parameterized10 |    32|
+|9     |  dffr_EXMEM_RegWriteAddr |dffr__parameterized11 |    46|
+|10    |  dffr_EXMEM_WB           |dffr                  |     2|
+|11    |  dffr_IDEX_EX            |dffr__parameterized0  |   526|
+|12    |  dffr_IDEX_Imm           |dffr__parameterized2  |   185|
+|13    |  dffr_IDEX_M             |dffr_0                |     2|
+|14    |  dffr_IDEX_RsAddr        |dffr__parameterized4  |     5|
+|15    |  dffr_IDEX_RsData        |dffr__parameterized6  |    32|
+|16    |  dffr_IDEX_RtAddr        |dffr__parameterized5  |     5|
+|17    |  dffr_IDEX_RtData        |dffr__parameterized7  |    32|
+|18    |  dffr_IDEX_Sa            |dffr__parameterized1  |   162|
+|19    |  dffr_IDEX_WB            |dffr_1                |     1|
+|20    |  dffr_MEMWB_ALUResult    |dffr__parameterized13 |   158|
+|21    |  dffr_MEMWB_RegWriteAddr |dffr__parameterized12 |    14|
+|22    |  dffr_MEMWB_WB           |dffr_2                |     2|
+|23    |  dffre_IFID_Instruction  |dffre                 |    91|
+|24    |  dffre_IFID_NextPC       |dffre_3               |     9|
+|25    |  seg7                    |seg                   |   151|
++------+--------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 676.211 ; gain = 469.113
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 118 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 676.211 ; gain = 157.148
+Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 676.211 ; gain = 469.113
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 18 instances were transformed.
+  LD => LDCE: 6 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+126 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 676.211 ; gain = 469.113
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 676.211 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 20 08:49:03 2017...

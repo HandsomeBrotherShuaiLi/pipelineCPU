@@ -1,0 +1,5 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "top_tb_v_time_impl.v" --include "../../../../Pipeline.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+
+# Do not sort compile order
+nosort

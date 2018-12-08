@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Nov 07 10:38:11 2017
+# Process ID: 12516
+# Current directory: S:/360Downloads/Pipeline/Pipeline.runs/dataRAM_synth_1
+# Command line: vivado.exe -log dataRAM.vds -mode batch -messageDb vivado.pb -notrace -source dataRAM.tcl
+# Log file: S:/360Downloads/Pipeline/Pipeline.runs/dataRAM_synth_1/dataRAM.vds
+# Journal file: S:/360Downloads/Pipeline/Pipeline.runs/dataRAM_synth_1\vivado.jou
+#-----------------------------------------------------------
+source dataRAM.tcl -notrace

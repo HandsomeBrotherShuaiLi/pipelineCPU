@@ -1,0 +1,62 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Mon Nov 20 08:49:53 2017
+| Host         : DESKTOP-707DVJK running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file MipsPipelineCPU_control_sets_placed.rpt
+| Design       : MipsPipelineCPU
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    18 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               6 |            3 |
+| No           | No                    | Yes                    |              25 |           10 |
+| No           | Yes                   | No                     |             212 |          103 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              32 |           10 |
+| Yes          | Yes                   | No                     |              43 |           16 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------+-----------------------------+--------------------------------------+------------------+----------------+
+|              Clock Signal             |        Enable Signal        |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++---------------------------------------+-----------------------------+--------------------------------------+------------------+----------------+
+|  seg7/seg7_clk                        |                             | seg7/reset                           |                2 |              3 |
+|  dffre_IFID_Instruction/q_reg[2]_0[0] |                             |                                      |                3 |              6 |
+|  clock/inst/clk_out1                  | dffre_IFID_Instruction/E[0] | seg7/reset                           |                1 |              6 |
+|  clock/inst/clk_out1                  | dffr_EXMEM_M/we             |                                      |                8 |             32 |
+|  clock/inst/clk_out1                  | dffr_EXMEM_ALUResult/E[0]   | seg7/reset                           |               10 |             32 |
+|  clock/inst/clk_out1                  | dffre_IFID_Instruction/E[0] | dffre_IFID_Instruction/SR[0]         |               15 |             37 |
+|  clock/inst/clk_out1                  | dffr_MEMWB_WB/Q[0]          |                                      |               12 |             96 |
+|  clock/inst/clk_out1                  |                             | dffre_IFID_Instruction/q_reg[0]_3[0] |               45 |            101 |
+|  clock/inst/clk_out1                  |                             | seg7/reset                           |               66 |            133 |
++---------------------------------------+-----------------------------+--------------------------------------+------------------+----------------+
+
+

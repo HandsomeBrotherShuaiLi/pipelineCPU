@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pa" timeStamp="Sun Dec 10 20:12:48 2017">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="f85635263cfa49cd9587fd0809e29423" type="ProjectID"/>
+<property name="ProjectIteration" value="15" type="ProjectIteration"/>
+</section>
+<section name="PlanAhead Usage" visible="true">
+<item name="Project Data">
+<property name="SrcSetCount" value="1" type="SrcSetCount"/>
+<property name="ConstraintSetCount" value="1" type="ConstraintSetCount"/>
+<property name="DesignMode" value="RTL" type="DesignMode"/>
+<property name="SynthesisStrategy" value="Vivado Synthesis Defaults" type="SynthesisStrategy"/>
+<property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
+</item>
+<item name="Java Command Handlers">
+<property name="AddSources" value="32" type="JavaHandler"/>
+<property name="CloseDesign" value="9" type="JavaHandler"/>
+<property name="CoreView" value="9" type="JavaHandler"/>
+<property name="CustomizeCore" value="12" type="JavaHandler"/>
+<property name="EditDelete" value="8" type="JavaHandler"/>
+<property name="EditUndo" value="2" type="JavaHandler"/>
+<property name="LaunchOpenTarget" value="12" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="11" type="JavaHandler"/>
+<property name="NewProject" value="1" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="11" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="3" type="JavaHandler"/>
+<property name="RecustomizeCore" value="20" type="JavaHandler"/>
+<property name="RunBitgen" value="14" type="JavaHandler"/>
+<property name="SetTopNode" value="6" type="JavaHandler"/>
+<property name="ShowView" value="1" type="JavaHandler"/>
+<property name="SimulationClose" value="10" type="JavaHandler"/>
+<property name="SimulationRelaunch" value="9" type="JavaHandler"/>
+<property name="SimulationRestart" value="2" type="JavaHandler"/>
+<property name="SimulationRun" value="28" type="JavaHandler"/>
+<property name="SimulationRunAll" value="2" type="JavaHandler"/>
+<property name="SimulationRunForTime" value="337" type="JavaHandler"/>
+<property name="ToolsOptions" value="2" type="JavaHandler"/>
+<property name="ToolsTemplates" value="3" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="FINISH, Finish" value="1" type="GuiResourceData"/>
+<property name="ID.v, 88, 288" value="1" type="GuiResourceData"/>
+<property name="MipsPipelineCPU.v, 160, 262" value="1" type="GuiResourceData"/>
+<property name="Multiplier.v, 0, 168" value="1" type="GuiResourceData"/>
+<property name="NEXT, Next " value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Complex Multiplier ; AXI4-Stream ; Production ; Included ; xilinx.com:ip:cmpy:6.0, 13" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Complex Multiplier ; AXI4-Stream ; Production ; Included ; xilinx.com:ip:cmpy:6.0, 13, Complex Multiplier, 0, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Complex Multiplier ; AXI4-Stream ; Production ; Included ; xilinx.com:ip:cmpy:6.0, 13, Complex Multiplier, 0, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Multiplier ;  ; Production ; Included ; xilinx.com:ip:mult_gen:12.0, 14" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Multiplier ;  ; Production ; Included ; xilinx.com:ip:mult_gen:12.0, 14, Multiplier, 0, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Multiplier ;  ; Production ; Included ; xilinx.com:ip:mult_gen:12.0, 14, Multiplier, 0, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, multiper" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CustomizeCoreDialog_DOCUMENTATION, Documentation" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, MUX8_1 (MUX8_1.v" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Multiplier (Multiplier.v" value="7" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, io_sel (io_sel.v" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, multiper (multiper.v" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, sw_mem_sel (sw_mem_sel.v" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, top_tb_v (top_tb.v" value="46" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, IP Catalog], 4, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, S:/360Downloads/Pipeline/Pipeline.xpr, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_CODE, Code" value="6" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_IP_CATALOG, IP Catalog" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_CREATE_FILE, Create File" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, PAResourceTtoZ.XPG_TopPanel_IP_SYMBOL, IP Symbol, 0" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="2" type="GuiResourceData"/>
+<property name="RDIResourceCommand.RDICommands_SAVE_FILE, (String" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 132, 221" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 154, 106" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 157, 132" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 158, 146" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 170, 178" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 173, 157" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 173, 174" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 177, 195" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 179, 113" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 179, 222" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 195, 176" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 2, 328" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 218, 193" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 241, 216" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 387, 141" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 57, 212" value="1" type="GuiResourceData"/>
+<property name="multiper.v, 809, 306" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="238" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="208" type="TclMode"/>
+</item>
+</section>
+</application>
+</document>

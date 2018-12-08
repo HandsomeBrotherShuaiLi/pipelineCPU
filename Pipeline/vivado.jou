@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Dec 04 08:21:35 2017
+# Process ID: 12152
+# Current directory: S:/360Downloads/Pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20000 S:\360Downloads\Pipeline\Pipeline.xpr
+# Log file: S:/360Downloads/Pipeline/vivado.log
+# Journal file: S:/360Downloads/Pipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project S:/360Downloads/Pipeline/Pipeline.xpr
+update_compile_order -fileset sources_1
+create_ip -name mult_gen -vendor xilinx.com -library ip -version 12.0 -module_name multiplier
+set_property -dict [list CONFIG.PortAType {Unsigned} CONFIG.PortAWidth {32} CONFIG.PortBType {Unsigned} CONFIG.PortBWidth {32} CONFIG.Use_Custom_Output_Width {false} CONFIG.OutputWidthHigh {63}] [get_ips multiplier]
+generate_target {instantiation_template} [get_files s:/360Downloads/Pipeline/Pipeline.srcs/sources_1/ip/multiplier/multiplier.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  s:/360Downloads/Pipeline/Pipeline.srcs/sources_1/ip/multiplier/multiplier.xci]
+export_ip_user_files -of_objects [get_files s:/360Downloads/Pipeline/Pipeline.srcs/sources_1/ip/multiplier/multiplier.xci] -no_script -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] s:/360Downloads/Pipeline/Pipeline.srcs/sources_1/ip/multiplier/multiplier.xci]
+launch_run -jobs 2 multiplier_synth_1
+export_simulation -of_objects [get_files s:/360Downloads/Pipeline/Pipeline.srcs/sources_1/ip/multiplier/multiplier.xci] -directory S:/360Downloads/Pipeline/Pipeline.ip_user_files/sim_scripts -ip_user_files_dir S:/360Downloads/Pipeline/Pipeline.ip_user_files -ipstatic_source_dir S:/360Downloads/Pipeline/Pipeline.ip_user_files/ipstatic -force -quiet
+remove_files -fileset multiplier s:/360Downloads/Pipeline/Pipeline.srcs/sources_1/ip/multiplier/multiplier.xci
+file delete -force s:/360Downloads/Pipeline/Pipeline.srcs/sources_1/ip/multiplier
+file delete -force S:/360Downloads/Pipeline/Pipeline.ip_user_files/ip/multiplier S:/360Downloads/Pipeline/Pipeline.ip_user_files/sim_scripts/multiplier

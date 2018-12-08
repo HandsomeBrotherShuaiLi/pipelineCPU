@@ -1,0 +1,226 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date             : Mon Nov 20 08:50:41 2017
+| Host             : DESKTOP-707DVJK running 64-bit major release  (build 9200)
+| Command          : report_power -file MipsPipelineCPU_power_routed.rpt -pb MipsPipelineCPU_power_summary_routed.pb -rpx MipsPipelineCPU_power_routed.rpx
+| Design           : MipsPipelineCPU
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------+
+| Total On-Chip Power (W)  | 0.225  |
+| Dynamic (W)              | 0.128  |
+| Device Static (W)        | 0.097  |
+| Effective TJA (C/W)      | 4.6    |
+| Max Ambient (C)          | 84.0   |
+| Junction Temperature (C) | 26.0   |
+| Confidence Level         | Medium |
+| Setting File             | ---    |
+| Simulation Activity File | ---    |
+| Design Nets Matched      | NA     |
++--------------------------+--------+
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.004 |        5 |       --- |             --- |
+| Slice Logic              |    <0.001 |     1639 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1047 |     63400 |            1.65 |
+|   Register               |    <0.001 |      318 |    126800 |            0.25 |
+|   CARRY4                 |    <0.001 |       12 |     15850 |            0.08 |
+|   LUT as Distributed RAM |    <0.001 |       80 |     19000 |            0.42 |
+|   Others                 |     0.000 |       27 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |       15 |     63400 |            0.02 |
+| Signals                  |    <0.001 |     1505 |       --- |             --- |
+| MMCM                     |     0.106 |        1 |         6 |           16.67 |
+| I/O                      |     0.018 |       18 |       210 |            8.57 |
+| Static Power             |     0.097 |          |           |                 |
+| Total                    |     0.225 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.020 |       0.005 |      0.015 |
+| Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |
+| Vcco33    |       3.300 |     0.009 |       0.005 |      0.004 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++------------------+-----------------------------+-----------------+
+| Clock            | Domain                      | Constraint (ns) |
++------------------+-----------------------------+-----------------+
+| clk              | clk                         |            10.0 |
+| clk_out1_clk_div | clock/inst/clk_out1_clk_div |            10.0 |
+| clkfbout_clk_div | clock/inst/clkfbout_clk_div |            10.0 |
++------------------+-----------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------------+-----------+
+| Name                                | Power (W) |
++-------------------------------------+-----------+
+| MipsPipelineCPU                     |     0.128 |
+|   ID                                |    <0.001 |
+|     MultiRegisters                  |    <0.001 |
+|       regs_reg_r1_0_31_0_5          |    <0.001 |
+|       regs_reg_r1_0_31_12_17        |    <0.001 |
+|       regs_reg_r1_0_31_18_23        |    <0.001 |
+|       regs_reg_r1_0_31_24_29        |    <0.001 |
+|       regs_reg_r1_0_31_30_31        |    <0.001 |
+|       regs_reg_r1_0_31_6_11         |    <0.001 |
+|       regs_reg_r2_0_31_0_5          |    <0.001 |
+|       regs_reg_r2_0_31_12_17        |    <0.001 |
+|       regs_reg_r2_0_31_18_23        |    <0.001 |
+|       regs_reg_r2_0_31_24_29        |    <0.001 |
+|       regs_reg_r2_0_31_30_31        |    <0.001 |
+|       regs_reg_r2_0_31_6_11         |    <0.001 |
+|   IF                                |    <0.001 |
+|     dffre_PC_REG                    |    <0.001 |
+|     instruction                     |     0.000 |
+|       U0                            |     0.000 |
+|         synth_options.dist_mem_inst |     0.000 |
+|           gen_rom.rom_inst          |     0.000 |
+|   clock                             |     0.106 |
+|     inst                            |     0.106 |
+|   dataram                           |    <0.001 |
+|     U0                              |    <0.001 |
+|       synth_options.dist_mem_inst   |    <0.001 |
+|         gen_sp_ram.spram_inst       |    <0.001 |
+|           ram_reg_0_63_0_0          |    <0.001 |
+|           ram_reg_0_63_10_10        |    <0.001 |
+|           ram_reg_0_63_11_11        |    <0.001 |
+|           ram_reg_0_63_12_12        |    <0.001 |
+|           ram_reg_0_63_13_13        |    <0.001 |
+|           ram_reg_0_63_14_14        |    <0.001 |
+|           ram_reg_0_63_15_15        |    <0.001 |
+|           ram_reg_0_63_16_16        |    <0.001 |
+|           ram_reg_0_63_17_17        |    <0.001 |
+|           ram_reg_0_63_18_18        |    <0.001 |
+|           ram_reg_0_63_19_19        |    <0.001 |
+|           ram_reg_0_63_1_1          |    <0.001 |
+|           ram_reg_0_63_20_20        |    <0.001 |
+|           ram_reg_0_63_21_21        |    <0.001 |
+|           ram_reg_0_63_22_22        |    <0.001 |
+|           ram_reg_0_63_23_23        |    <0.001 |
+|           ram_reg_0_63_24_24        |    <0.001 |
+|           ram_reg_0_63_25_25        |    <0.001 |
+|           ram_reg_0_63_26_26        |    <0.001 |
+|           ram_reg_0_63_27_27        |    <0.001 |
+|           ram_reg_0_63_28_28        |    <0.001 |
+|           ram_reg_0_63_29_29        |    <0.001 |
+|           ram_reg_0_63_2_2          |    <0.001 |
+|           ram_reg_0_63_30_30        |    <0.001 |
+|           ram_reg_0_63_31_31        |    <0.001 |
+|           ram_reg_0_63_3_3          |    <0.001 |
+|           ram_reg_0_63_4_4          |    <0.001 |
+|           ram_reg_0_63_5_5          |    <0.001 |
+|           ram_reg_0_63_6_6          |    <0.001 |
+|           ram_reg_0_63_7_7          |    <0.001 |
+|           ram_reg_0_63_8_8          |    <0.001 |
+|           ram_reg_0_63_9_9          |    <0.001 |
+|   dffr_EXMEM_ALUResult              |    <0.001 |
+|   dffr_EXMEM_M                      |    <0.001 |
+|   dffr_EXMEM_MemWriteData           |    <0.001 |
+|   dffr_EXMEM_RegWriteAddr           |    <0.001 |
+|   dffr_EXMEM_WB                     |    <0.001 |
+|   dffr_IDEX_EX                      |    <0.001 |
+|   dffr_IDEX_Imm                     |    <0.001 |
+|   dffr_IDEX_M                       |    <0.001 |
+|   dffr_IDEX_RsAddr                  |    <0.001 |
+|   dffr_IDEX_RsData                  |    <0.001 |
+|   dffr_IDEX_RtAddr                  |    <0.001 |
+|   dffr_IDEX_RtData                  |    <0.001 |
+|   dffr_IDEX_Sa                      |    <0.001 |
+|   dffr_IDEX_WB                      |    <0.001 |
+|   dffr_MEMWB_ALUResult              |    <0.001 |
+|   dffr_MEMWB_RegWriteAddr           |    <0.001 |
+|   dffr_MEMWB_WB                     |    <0.001 |
+|   dffre_IFID_Instruction            |    <0.001 |
+|   dffre_IFID_NextPC                 |    <0.001 |
+|   seg7                              |     0.001 |
++-------------------------------------+-----------+
+
+
