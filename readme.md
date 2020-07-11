@@ -1,5 +1,5 @@
-`Five-Stage Pipeline CPU Implemented by Verilog on FPGA`
-
+#Five-Stage Pipeline CPU Implemented by Verilog on FPGA. 
+* Report. 
  ![doc](pic/QQ图片20181209001520.png)
  ![doc](pic/QQ图片20181209001610.png)
  ![doc](pic/QQ图片20181209001628.png)
